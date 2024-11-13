@@ -1,0 +1,37 @@
+WebAPI?
+Web API is a framework of MS to provide RESTFull Services for UR Web Applications. REST stands for Representational State Transfer. It is usefull for sharing the data using simple HTTP protocol and use the HTTP verbs like GET, PUT, POST and DELETE to define the direction of the data transfer. The data is self descriptive using formats like JSON, XML and BSON. Hense its called as Representable data. The data is text based. 
+
+Why Web Api?
+ Web API cleanly seperates the Persistance layer and the User interface layer. APIs will only do the data(STATE) transfers. U will not have any User interfaces to it. To Test these APIs, we can use Browsers to read(GET), and POSTMAN, Fiddler, Swagger for testing POST(send), DELETE(delete) and PUT(Modify). We also use PATCH(Partial Modifications) in the data. Now U dont have to write a complete Web App to develop. U can develop only the APIs(Functions) to be consumed by developers who wish to take UR services. Developers will consume UR APIs get the data they want and display it in their applications using various client side technologies like Angular, React, Vue and many more including ASP.NET MVC. As far as MVC is concerned, MVC will provide the View which is not given by the Web API. The controllers of the MVC will make service requests to the Web API and get the data and push it as Action Results to the Views. 
+
+ How Web API works?
+ Web API uses MVC pipeline for handling the requests. Here U can have controllers that dont give Action Results but data only. The controllers of the Web API will be derived from ControllerBase class that will have actions with no view support.  The Controller class will have APIs with routes and the HTTP methods mentioned in the form of Attributes. The APIs will perform the required persistence operations based on the VERB of the HTTP. 
+
+ ------------------------------------------
+ What are the different ways of data Access available in .NET?
+ ADO.NET Connected Model(.NET Framework)
+ ADO.NET Disconnected Model(.NET Framework)
+ The above 2 uses native SQL statements to interact with the database. 
+ Entity Framework(.NET Framework and Core): Will work on all kinds of databases.
+ LINQToSQL(.NET Framework): Works only on SQL Server.
+
+ The above 2 will use ORM(Object relational Mapping) to interact with the database.
+ But if U want to work on .NET CORE and ASP.NET CORE, then U must use EntityFramework Core for data access. ADO.NET has dependencies on COM objects which are not supported on other platforms. Entity Framework Core is the recommended Data Access model for all .NET CORE Apps. 
+
+ Here, u have 2 approaches. CF and DF approach. Code First Approach makes U to create the classes and entities before any DB is created. This will be helpful for on-the-fly DB Creations. 
+ 
+ Code First Approach:
+ Create the Entities required
+ Create a DBContext class that links bw the database and UR Entities.
+ Configure UR json file for the ConnectionStrings.
+ Use the migration tools provided by EF CORE to perform the database generations.
+ Develop the Controller for the Web API based on the Context using DI...
+
+
+
+ 
+
+
+
+
+

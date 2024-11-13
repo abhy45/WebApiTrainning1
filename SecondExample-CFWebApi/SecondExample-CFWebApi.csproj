@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>SecondExample_CFWebApi</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20220613111827_MyMigrations.cs" />
+    <Compile Remove="Migrations\20220613111827_MyMigrations.Designer.cs" />
+    <Compile Remove="Migrations\20220613114532_StudentMigration.cs" />
+    <Compile Remove="Migrations\20220613114532_StudentMigration.Designer.cs" />
+    <Compile Remove="Migrations\20220613114839_StudentMigrationv2.cs" />
+    <Compile Remove="Migrations\20220613114839_StudentMigrationv2.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+</Project>
